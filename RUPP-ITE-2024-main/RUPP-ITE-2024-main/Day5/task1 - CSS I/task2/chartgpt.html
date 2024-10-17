@@ -1,0 +1,74 @@
+1 Inline CSS:
+
+Applied directly to an HTML element using the style attribute.
+Example: <h1 style="color: blue;">This is a blue heading</h1>
+Advantages:
+
+Quick for making small, specific changes.
+Can override other CSS (inline styles have the highest specificity).
+Disadvantages:
+
+Hard to maintain and not reusable.
+Mixes HTML structure with styling, leading to cluttered code.
+2 Internal CSS:
+
+Defined within the <style> tag inside the <head> section of an HTML document.
+Advantages:
+
+Useful for single-page styling.
+Keeps styles centralized within the HTML document.
+Disadvantages:
+
+Cannot be reused across multiple pages.
+Adds to the size of the HTML document.
+3 External CSS:
+
+Stored in a separate .css file and linked to the HTML document using the <link> tag.
+Example: <link rel="stylesheet" href="styles.css">
+Advantages:
+
+Can be reused across multiple pages.
+Keeps HTML and CSS separate, making the code more maintainable and cleaner.
+External CSS files can be cached by the browser, improving load times for subsequent pages.
+Disadvantages:
+
+Increases the number of HTTP requests (but can be mitigated by caching).
+More complex to set up compared to inline CSS.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demonstration: Inline, Internal, and External</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0;  /* Light grey background */
+            font-family: Arial, sans-serif;  /* Simple, clean font */
+        }
+        h1 {
+            color: green;  /* All h1 headings are green */
+        }
+        p.internal {
+            color: darkgray;  /* Paragraphs with this class are dark gray */
+            font-size: 18px;  /* Increased font size for readability */
+        }
+    </style>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Inline CSS Example -->
+    <h1 style="color: blue;">This is a blue heading (Inline CSS)</h1>
+    
+    <!-- Internal CSS Example -->
+    <p class="internal">This paragraph is styled using internal CSS. The styles are defined in the &lt;style&gt; block within the HTML document.</p>
+    
+    <!-- External CSS Example -->
+    <p class="external">This paragraph is styled using external CSS. The styles are loaded from an external stylesheet linked in the &lt;head&gt; section.</p>
+
+</body>
+</html>

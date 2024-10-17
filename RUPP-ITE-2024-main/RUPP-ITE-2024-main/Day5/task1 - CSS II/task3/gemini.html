@@ -1,0 +1,50 @@
+Sass (Syntactically Awesome StyleSheets) is a CSS preprocessor that extends the functionality of CSS by adding features like nesting, variables, mixins, and more. Sass files are compiled into regular CSS that can be used in web development.
+
+Key Differences Between Sass and Regular CSS:
+Nesting: Sass allows you to nest selectors within each other, making your code more organized and readable.
+Variables: You can define variables to store values like colors, fonts, or dimensions, making it easier to manage and update your styles.
+Mixins: Mixins are reusable blocks of code that can be included in multiple places, reducing redundancy.
+Partials: Partials are Sass files that start with an underscore (_) and are not meant to be compiled directly. They are typically imported into other Sass files.
+Imports: Sass allows you to import other Sass files, including partials, to organize your code into modular components.
+Example Sass File:
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Mixin
+@mixin button-style {
+  padding: 10px 20px;
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+}
+
+// Nesting
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  .button {
+    @include button-style;
+  }
+}
+
+// Partial (assuming a file named _utils.scss)
+@import 'utils'; // Imports the contents of _utils.scss
+
+
+Resulting Compiled CSS:
+CSS
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container .button {
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}

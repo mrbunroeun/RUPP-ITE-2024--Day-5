@@ -1,0 +1,127 @@
+CSS provides a range of methods to align elements, both horizontally and vertically, using properties like text-align, vertical-align, and more advanced techniques like Flexbox. The display property controls how an element is rendered on the page, allowing for various layouts.
+
+Key Display Properties:
+block:
+Elements with display: block take up the full width of their container and start on a new line (e.g., <div>, <p>, <h1>).
+
+inline:
+display: inline elements only take up as much space as their content requires and can sit next to other inline elements (e.g., <span>, <a>, <img>).
+
+inline-block:
+Combines features of both inline and block. Elements behave like inline, but you can set width and height like block.
+
+flex:
+The flex display mode enables the creation of flexible layouts. It aligns and distributes space among items in a container (via display: flex) and allows control over horizontal and vertical alignment.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment and Display Properties</title>
+    <style>
+        /* General styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Text alignment */
+        h1 {
+            text-align: center; /* Centers the heading */
+            color: darkblue;
+        }
+
+        p {
+            text-align: justify; /* Justifies text */
+        }
+
+        /* Vertical alignment within a container */
+        .vertical-align-example {
+            height: 100px;
+            line-height: 100px; /* Makes the text vertically aligned */
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        /* Display block */
+        .block-example {
+            display: block;
+            background-color: lightgreen;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        /* Display inline */
+        .inline-example {
+            display: inline;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* Display inline-block */
+        .inline-block-example {
+            display: inline-block;
+            width: 150px;
+            background-color: lightgoldenrodyellow;
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        /* Flexbox layout */
+        .flex-container {
+            display: flex;
+            justify-content: space-around; /* Horizontal alignment */
+            align-items: center; /* Vertical alignment */
+            background-color: lightgray;
+            height: 200px;
+        }
+
+        .flex-item {
+            background-color: lightpink;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading with text alignment -->
+    <h1>CSS Alignment and Display Properties</h1>
+
+    <!-- Paragraph demonstrating text justification -->
+    <p>
+        This is an example paragraph demonstrating text alignment. The text is justified, meaning that the spacing between words is adjusted so that each line has equal width, making the text align evenly along both the left and right edges of the paragraph.
+    </p>
+
+    <!-- Block element -->
+    <div class="block-example">
+        This is a block element. It takes up the full width of its container and starts on a new line.
+    </div>
+
+    <!-- Inline elements -->
+    <span class="inline-example">Inline 1</span>
+    <span class="inline-example">Inline 2</span>
+    <span class="inline-example">Inline 3</span>
+
+    <!-- Inline-block elements -->
+    <div class="inline-block-example">Inline-Block 1</div>
+    <div class="inline-block-example">Inline-Block 2</div>
+
+    <!-- Vertical alignment using line-height -->
+    <div class="vertical-align-example">
+        This text is vertically centered using line-height.
+    </div>
+
+    <!-- Flexbox alignment -->
+    <div class="flex-container">
+        <div class="flex-item">Flex Item 1</div>
+        <div class="flex-item">Flex Item 2</div>
+        <div class="flex-item">Flex Item 3</div>
+    </div>
+
+</body>
+</html>

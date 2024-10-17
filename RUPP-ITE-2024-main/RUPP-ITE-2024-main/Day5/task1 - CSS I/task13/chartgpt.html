@@ -1,0 +1,51 @@
+CSS variables, also known as custom properties, allow developers to create reusable values in their stylesheets. They follow the syntax --variable-name and can be defined globally or scoped to specific selectors. CSS variables are especially useful for maintaining consistency, as changing a variable's value will automatically update all styles that use that variable.
+
+How CSS Variables Work
+Defining Variables: CSS variables are typically defined within a selector, usually the :root pseudo-class for global scope, allowing them to be accessible throughout the stylesheet.
+
+Using Variables: To use a variable, you call it with the var() function, like var(--variable-name).
+
+Changing Variables: You can redefine CSS variables at different scopes or media queries, allowing for responsive designs.
+
+Example: Defining and Using CSS Variables
+Here's an example that demonstrates defining CSS variables and changing their values.
+
+
+/* Defining CSS Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-size: 16px;
+}
+
+/* Using CSS Variables */
+body {
+    font-size: var(--font-size);
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: calc(var(--font-size) * 2);
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Changing Variable Values for a Different Theme */
+.dark-theme {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+}

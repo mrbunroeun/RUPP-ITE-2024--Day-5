@@ -1,0 +1,102 @@
+In CSS, you can control the appearance of text using various properties like font-family, font-size, font-weight, and text-align. These properties help define the typography of a webpage, giving the content a unique style that improves readability and aesthetics.
+
+Common CSS Text and Font Properties:
+font-family: Defines the typeface used for the text. You can specify multiple fonts, separated by commas, to provide fallback options.
+font-size: Controls the size of the text. Can be set using units like px, em, %, rem, or vw.
+font-weight: Specifies the thickness or boldness of the font. Values can range from 100 (thin) to 900 (extra bold), or you can use keywords like normal or bold.
+text-align: Aligns the text horizontally within its container (e.g., left, center, right, justify).
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Font Styling Example</title>
+    <style>
+        /* Font family and text alignment for the whole body */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Heading styles */
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: darkblue;
+        }
+
+        h2 {
+            font-family: 'Tahoma', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: darkred;
+        }
+
+        /* Paragraph styles */
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p.large-text {
+            font-size: 20px;
+            font-weight: 300;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        /* Link styling */
+        a {
+            font-weight: bold;
+            color: darkgreen;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: orange;
+        }
+
+        /* Aligning and styling text in the footer */
+        footer {
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Heading -->
+    <h1>Welcome to Text Styling in CSS</h1>
+
+    <!-- Subheading -->
+    <h2>Understanding Font Properties</h2>
+
+    <!-- Paragraph with normal font size and weight -->
+    <p>
+        This is a basic example of a paragraph styled using the default font family "Arial". It also demonstrates a normal text size of 16px and a left-aligned text layout.
+    </p>
+
+    <!-- Paragraph with larger text size and lighter font weight -->
+    <p class="large-text">
+        This paragraph has larger text (20px) and a lighter font weight of 300. The font family used here is "Verdana" for a slightly different look.
+    </p>
+
+    <!-- Example of a link -->
+    <p>
+        Check out more about <a href="#">CSS text styling here</a>.
+    </p>
+
+    <!-- Footer with smaller text -->
+    <footer>
+        &copy; 2024 Text Styling Example. All rights reserved.
+    </footer>
+
+</body>
+</html>

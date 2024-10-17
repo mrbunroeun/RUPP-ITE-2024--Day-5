@@ -1,0 +1,50 @@
+CSS selectors are used to target specific HTML elements to which styles are applied. They act as a way to identify elements based on their name, class, ID, attributes, or other characteristics.
+
+Types of CSS Selectors:
+
+Element Selectors: Target elements based on their tag name (e.g., h1, p, div).
+Class Selectors: Target elements based on their class attribute (e.g., .my-class).
+ID Selectors: Target elements based on their ID attribute (e.g., #my-id).
+Attribute Selectors: Target elements based on their attributes (e.g., [href], [type="button"]).
+Pseudo-class Selectors: Target elements based on their state or condition
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+    <style>
+        /* Element selector */
+        p {
+            color: blue;
+        }
+
+        /* Class selector */
+        .my-class {
+            font-weight: bold;
+        }
+
+        /* ID selector */
+        #my-id {
+            background-color: yellow;
+        }
+
+        /* Attribute selector */
+        a[href] {
+            text-decoration: underline;
+        }
+
+        /* Pseudo-class selector */
+        button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p class="my-class">This is a paragraph.</p>
+    <p id="my-id">This is another paragraph.</p>
+    <a href="https://example.com">Link to Example</a>
+    <button>Click me</button>
+</body>
+</html>

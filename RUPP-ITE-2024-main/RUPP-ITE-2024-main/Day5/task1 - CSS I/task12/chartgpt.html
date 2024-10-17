@@ -1,0 +1,37 @@
+Flexbox, or the Flexible Box Layout, is a CSS layout model designed to enable responsive web design more efficiently. It allows for the arrangement of items in a one-dimensional space, either as a row or a column. Flexbox is particularly useful for creating fluid layouts that adapt to varying screen sizes, making it an essential tool for modern web development.
+
+Key Features of Flexbox
+Responsive Design: Flexbox enables elements to resize and adjust their position based on the available space, which is ideal for responsive designs.
+Alignment Control: It provides a straightforward way to align items along the main axis (horizontal or vertical) and the cross axis.
+Direction Control: Flexbox allows for easy changes between row and column orientations, making it versatile for different layout needs.
+Important Flexbox Properties
+display: flex;: Activates the Flexbox model on a container, making its children flex items.
+flex-direction: Defines the direction of the flex items within the container.
+Values: row (default), row-reverse, column, column-reverse.
+justify-content: Aligns the flex items along the main axis.
+Values: flex-start, flex-end, center, space-between, space-around, space-evenly.
+ wrap, wrap-reverse.align-items: Aligns the flex items along the cross axis.
+Values: flex-start, flex-end, center, baseline, stretch.
+flex-wrap: Specifies whether the flex items should wrap onto multiple lines.
+Values: nowrap (default),
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flexbox Layout</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Header</header>
+        <main class="main">
+            <div class="column">Column 1</div>
+            <div class="column">Column 2</div>
+            <div class="column">Column 3</div>
+        </main>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>

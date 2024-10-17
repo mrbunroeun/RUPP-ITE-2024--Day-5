@@ -1,0 +1,28 @@
+CSS Compilation is the process of converting preprocessed CSS code into standard CSS that can be understood by web browsers. This conversion typically involves transforming specialized syntax, variables, mixins, functions, and other features provided by preprocessors into standard CSS properties and values.
+
+CSS Preprocessors like Sass and LESS extend the capabilities of CSS by adding features that make writing and maintaining stylesheets more efficient and organized. These features include:
+
+Variables: Storing reusable values for colors, fonts, and other properties.
+Nesting: Creating nested rules for better organization and readability.
+Mixins: Defining reusable blocks of CSS code that can be included multiple times.
+Functions: Creating custom functions to perform calculations or manipulate values.
+Steps Involved in Compiling Sass to CSS:
+
+Write Sass code: Create a Sass file (.scss or .sass) containing your desired styles.
+Use a Sass compiler: Choose a Sass compiler (e.g., Sass, Ruby Sass, Node.js Sass) to process your Sass file.
+Compile to CSS: The compiler will parse your Sass code, interpret its syntax, and generate the corresponding CSS code.
+Include the compiled CSS: Reference the compiled CSS file in your HTML document to apply the styles to your web page.
+
+$primary-color: #ff69b4;
+
+.button {
+  background-color: $primary-color;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+In this example, the Sass code defines a variable $primary-color and uses it within the .button class. The Sass compiler replaces the variable with its actual value during compilation, generating the final CSS code.
+
+By using CSS preprocessors and compilation, you can write more efficient, maintainable, and scalable stylesheets, improving your development workflow and the quality of your web projects.

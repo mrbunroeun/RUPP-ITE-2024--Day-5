@@ -1,0 +1,41 @@
+
+Variables, Functions, and Inheritance in Sass
+Sass (Syntactically Awesome Stylesheets) is a CSS preprocessor that provides features like variables, functions, and inheritance to make writing CSS more efficient and maintainable.
+
+1. Variables in Sass
+Variables in Sass are used to store values (such as colors, fonts, or spacing units) that can be reused throughout your stylesheet. This ensures consistency in design and makes it easier to update values globally.
+
+Declaring and Using Variables
+
+// Declare variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size-large: 18px;
+
+// Use variables
+body {
+  font-family: Arial, sans-serif;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: $font-size-large;
+  color: $secondary-color;
+}
+The $primary-color, $secondary-color, and $font-size-large variables are declared.
+These variables are used in the body and h1 styles, ensuring consistency in color and font size across different elements.
+2. Functions in Sass
+Functions in Sass allow you to define reusable blocks of code that return a value. You can use functions to calculate values, manipulate colors, or create more dynamic styles.
+
+Example of a Custom Function
+
+// Custom function to calculate the rem unit
+@function calculate-rem($size-px, $base-font-size: 16px) {
+  @return $size-px / $base-font-size * 1rem;
+}
+
+// Using the function
+p {
+  font-size: calculate-rem(18px); // Converts 18px to rem based on a 16px base font size
+  margin: calculate-rem(24px);
+}

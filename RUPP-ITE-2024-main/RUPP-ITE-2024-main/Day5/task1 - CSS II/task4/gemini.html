@@ -1,0 +1,78 @@
+Variables in Sass allow you to store values that can be reused throughout your stylesheet. This helps maintain consistency and makes it easier to update styles in multiple places. 
+
+$primary-color: #007bff;
+$font-family: "Roboto", sans-serif;
+
+body {
+  color: $primary-color;
+  font-family: $font-family;
+}
+
+h1 {
+  color: darken($primary-color, 20%);
+}
+Variables in Sass
+Variables in Sass allow you to store values that can be reused throughout your stylesheet. This helps maintain consistency and makes it easier to update styles in multiple places.
+
+Example:
+
+SCSS
+$primary-color: #007bff;
+$font-family: "Roboto", sans-serif;
+
+body {
+  color: $primary-color;
+  font-family: $font-family;
+}
+
+h1 {
+  color: darken($primary-color, 20%);
+}
+Use code with caution.
+
+In this example, the $primary-color and $font-family variables are defined and used in the body and h1 selectors. This ensures that the same color and font are used consistently throughout the stylesheet.
+
+Functions in Sass
+Functions in Sass allow you to create reusable blocks of code that perform specific tasks. This can help simplify your stylesheet and make it more maintainable.
+
+Example:
+
+SCSS
+@function calculate-padding($value) {
+  @return $value * 2;
+}
+
+.container {
+  padding: calculate-padding(20px);
+}
+Use code with caution.
+
+In this example, the calculate-padding function is defined to calculate the padding value based on a given input. It can then be used in the .container selector to set the padding.
+
+Inheritance in Sass
+Inheritance in Sass allows you to create a base stylesheet and then extend it to create more specific styles. This can help reduce redundancy and improve code organization.
+
+Example:
+
+SCSS
+.button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.primary-button {
+  @extend .button;
+  background-color: $primary-color;
+  color: white;
+}
+
+.secondary-button {
+  @extend .button;
+  background-color: #f2f2f2;
+}
+Use code with caution.
+
+In this example, the .button class defines the base styles for all buttons. The .primary-button and .secondary-button classes extend the .button class and add their own specific styles. This helps to avoid repeating the same styles in multiple places.
+
+By using variables, functions, and inheritance, you can create more organized, maintainable, and consistent stylesheets in Sass.
